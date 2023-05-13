@@ -9,7 +9,7 @@ class User extends CI_Controller{
         $users=$this->user_model->all();
         $data=array();
         $data['users']=$users;
-        $this->load->view('list',$data);
+        $this->load->view('create',$data);
 
 
     }

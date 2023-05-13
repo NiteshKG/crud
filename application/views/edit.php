@@ -14,11 +14,11 @@
         <div class="container">
            
        <div class="input">
-     <label> Name</label> : <input type="text" name="name" placeholder="name"  >
+     <label> Name</label> : <input type="text" name="name" value="<?php echo set_value('name',$user['name']);?>"  >
      <label for=""><?php echo form_error('name')? form_error('name') : '' ;?></label>
        </div>
        <div class="input">
-       <label>Email</label> :  <input type="email" name="email" placeholder="email">
+       <label>Email</label> :  <input type="email" name="email" value="<?php echo set_value('email',$user['email']);?>">
        <label for=""><?php echo form_error('email')? form_error('email') : '' ;?>
       </div>
       
