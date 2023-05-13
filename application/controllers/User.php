@@ -19,7 +19,7 @@ class User extends CI_Controller{
         $data=array();
         $data['user']=$user;
         $this->form_validation->set_rules('name', 'Name','required' );
-        $this->form_validation->set_rules('email', 'Email','required|valid_email|is_unique[users.email]' );
+        $this->form_validation->set_rules('email', 'Email','required|valid_email' );
         if($this->form_validation->run()){
           $formArray = array();
           $formArray['name']=$this->input->post('name');
@@ -37,7 +37,7 @@ class User extends CI_Controller{
         $this->load->model('User_model');
 
         $this->form_validation->set_rules('name', 'Name','required' );
-        $this->form_validation->set_rules('email', 'Email','required|valid_email' );
+        $this->form_validation->set_rules('email', 'Email','required|valid_email|is_unique[users.email]' );
 
        if($this->form_validation->run()){
             $formArray=array();
